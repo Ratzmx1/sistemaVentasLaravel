@@ -1,0 +1,25 @@
+#sidebar {
+    width: 20%;
+    background: #dfe1e2 ;
+    position: fixed;
+    height: 100%;
+    right: -20%;
+    transition: left 0.7s ease, right 0.7s ease;
+    overflow-y: scroll;
+}
+
+#sidebar.visibilityOn {
+    right: 0;
+    transition: left 0.7s ease, right 0.7s ease;
+}
+
+#mainContent{
+    right: 20vw;
+    transition: left 0.7s ease, right 0.7s ease;
+}
+
+#mainContent.visibilityOn{
+    right: 25vw;
+    transition: left 0.7s ease, right 0.7s ease;
+    position:absolute;
+}
