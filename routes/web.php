@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', \App\Http\Livewire\Products::class)->name('home')->middleware("auth");
 Route::get('/checkout', \App\Http\Livewire\Checkout::class)->name('checkout')->middleware("auth");
-
+Route::get("/payment1",\App\Http\Livewire\PaymentMethod::class)->name("paymentMethod")->middleware("auth");

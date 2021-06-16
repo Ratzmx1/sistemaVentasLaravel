@@ -14,8 +14,7 @@ class Cart extends Component
      */
     public $cartItems, $total;
 
-    protected $listeners = ['addProduct'];
-
+    protected $listeners = ['addProduct','solicitoCarrito', 'deleteProduct'=>'delete'];
 
     public function mount(){
         $prods = [];
@@ -30,11 +29,14 @@ class Cart extends Component
         }
     }
 
+    public function solicitoCarrito(){
+        $this->emit('entregoCarrito',$this->cartItems);
+    }
+
 
     public function delete($index){
         $item = $this->cartItems->pull($index);
         $this->total -= $item['price'];
-
         $user = Auth::user();
         $prods = [];
         foreach ($this->cartItems as $item){

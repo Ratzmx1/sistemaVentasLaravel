@@ -1,25 +1,61 @@
-#sidebar {
-    width: 20%;
-    background: #dfe1e2 ;
-    position: fixed;
-    height: 100%;
-    right: -20%;
-    transition: left 0.7s ease, right 0.7s ease;
-    overflow-y: scroll;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #sidebar {
+        width: 100%;
+        background: #dfe1e2 ;
+        /*position: fixed;*/
+        height: max-content;
+        top: -20%;
+        transition: bottom 0.7s ease, top 0.7s ease;
+        display: none;
+    }
+
+    #sidebar.visibilityOn {
+        top: 0;
+        transition: left 0.7s ease, right 0.7s ease;
+        display: block;
+    }
+
+    #mainContent{
+        margin-top: 5vh;
+        transition: left 0.7s ease, right 0.7s ease;
+    }
 }
 
-#sidebar.visibilityOn {
-    right: 0;
-    transition: left 0.7s ease, right 0.7s ease;
+
+@media only screen and (min-device-width: 481px) {
+    #sidebar {
+        width: 20%;
+        background: #F9F9F9 ;
+        position: fixed;
+        height: 100%;
+        right: -20%;
+        transition: left 0.7s ease, right 0.7s ease;
+        overflow-y: scroll;
+    }
+
+    #sidebar.visibilityOn {
+        right: 0;
+        transition: left 0.7s ease, right 0.7s ease;
+    }
+
+    #mainContent{
+        right: 20vw;
+        transition: left 0.7s ease, right 0.7s ease;
+    }
+
+    #mainContent.visibilityOn{
+        right: 25vw;
+        transition: left 0.7s ease, right 0.7s ease;
+        position:absolute;
+    }
+
 }
 
-#mainContent{
-    right: 20vw;
-    transition: left 0.7s ease, right 0.7s ease;
+
+img .imagen{
+    object-fit: cover;
 }
 
-#mainContent.visibilityOn{
-    right: 25vw;
-    transition: left 0.7s ease, right 0.7s ease;
-    position:absolute;
+.card{
+    background-color: #f9f9f9 ;
 }

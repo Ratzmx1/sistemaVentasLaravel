@@ -1,5 +1,5 @@
 
-<div id="sidebar" class="py-5 px-2">
+<div id="sidebar" style="z-index: 999; border-left: 1px rgba(51,51,51,0.1) solid" class="py-5 px-2">
 
     <h4 class="text-center" style="margin-bottom: 3vh">Carrito de compras</h4>
 
@@ -41,36 +41,4 @@
         }
     </script>
 </div>
-{{--<div class="dropdown">--}}
-{{--    <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--        <i class="fa" style="font-size:24px">&#xf07a;</i>--}}
-{{--        <span class='badge' id='lblCartCount'> {{count($cartItems)}} </span>--}}
-{{--    </button>--}}
-{{--    <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuButton">--}}
-{{--        @foreach($cartItems as $index=>$item)--}}
-{{--            <div wire:key="{{$item['id']}}" class="">--}}
-{{--                <button wire:click="delete({{$index}})" class="dropdown-item dropdown-item-text m-0" type="button" >--}}
-{{--                    <b> {{$item['name']}}</b>--}}
-{{--                    <br/>--}}
-{{--                    <div class="float-right text-muted">--}}
-{{--                        $ {{$item['price']}} <i class="fas fa-times"></i>--}}
-{{--                    </div>--}}
-{{--                </button>--}}
-{{--                <hr />--}}
-{{--            </div>--}}
-{{--        @endforeach--}}
-{{--        @if(count($cartItems))--}}
-{{--            <div class="mx-1">--}}
-{{--                <h5 class=""> Total: <div class="text-right"><b>$ {{$total}}</b></div> </h5>--}}
-{{--                <a href="{{route("checkout")}}" class="btn btn-success btn-block">Comprar</a>--}}
-{{--            </div>--}}
-
-{{--            @else--}}
-{{--            <p class="dropdown-item-text mt-3">No hay productos en el carrito</p>--}}
-{{--            @endif--}}
-{{--    </div>--}}
-
-{{--</div>--}}
-
-
 

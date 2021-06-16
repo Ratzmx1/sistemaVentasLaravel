@@ -1,9 +1,9 @@
 <div class="container">
-    <h1 class="text-center display-3 mb-5">Productos</h1>
+    <h1 class="text-center display-3 mb-5" >Productos</h1>
 
     <div class="row  mb-5">
         @foreach ($products as $product)
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="card mb-4" >
                     <img class="card-img-top imagen"  style="object-fit: cover;" src="{{$product->image}}" alt="{{$product->name." image"}}" />
                     <div class="card-body">

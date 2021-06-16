@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm position-fixed" style="width: 100%; z-index: 100">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm position-fixed" style="width: 100%; z-index: 10000">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -50,10 +50,11 @@
                                 </li>
                             @endif
                         @else
+                            @if(!Route::is("checkout") and !Route::is("paymentMethod"))
                             <li class="nav-item">
                                 <livewire:cart-icon />
                             </li>
-
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

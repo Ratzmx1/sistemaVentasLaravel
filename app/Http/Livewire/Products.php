@@ -12,7 +12,7 @@ use Livewire\WithPagination;
 class Products extends Component
 {
     use WithPagination;
-    protected $paginationTheme = 'bootstrap';
+    protected $paginationTheme = 'simple-tailwind';
     protected $listeners = ['cartDeleted'];
     public $products;
 
@@ -26,12 +26,6 @@ class Products extends Component
             'message'=>"Product deleted successfully from the cart"
         ]);
     }
-
-//
-//
-//    public function hydrate(){
-//        $this->dispatchBrowserEvent('productsUpdated');
-//    }
 
     public function render(){
         $prod = Product::paginate(9);
