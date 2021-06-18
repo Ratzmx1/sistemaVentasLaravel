@@ -47,7 +47,7 @@ class paymentController extends Controller
         }else{
             $token = $request->get("token_ws");
             $transaction = new Transaction();
-            $res = $transaction->commit($token);
+            $res = $transaction->status($token);
             $total = $res->amount;
             $id = $res->buyOrder;
             $ticket = Ticket::find(intval($id));
