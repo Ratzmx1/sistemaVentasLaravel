@@ -33,7 +33,11 @@
                     <div class="card-body">
                         <h3 class="text-center mb-5">Descripcion</h3>
                         <h4 class="mb-5" > Subtotal  <div class="text-right">$ {{$total}} </div></h4>
-                        <button class="btn btn-success btn-block" wire:click="continueButton()"> Confirmar </button>
+                        <form method="post" action="{{route("paymentMethod")}}">
+                            @csrf
+                            <button class="btn btn-success btn-block" > Confirmar </button>
+                        </form>
+                        <img src="{{asset("WebpayPlusLogo.svg")}}" style="margin:5% 30% 0 30%" alt="Webplay Plus Logo" />
                     </div>
                 </div>
 

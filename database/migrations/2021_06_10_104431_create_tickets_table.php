@@ -13,7 +13,8 @@ class CreateTicketsTable extends Migration
 
             $table->integer("total");
             $table->foreignId("user_id")->constrained();
-
+            $table->enum('state',['PAGADO','PENDIENTE DE PAGO'])->default('PENDIENTE DE PAGO');
+            $table->string("token_ws")->nullable();
             $table->timestamps();
         });
     }

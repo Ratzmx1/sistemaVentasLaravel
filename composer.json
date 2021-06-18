@@ -14,7 +14,9 @@
         "laravel/ui": "^3.3",
         "laraveles/spanish": "^1.5",
         "livewire/livewire": "^2.4",
-        "spatie/laravel-permission": "^4.2"
+        "spatie/laravel-permission": "^4.2",
+        "transbank/transbank-sdk": "2.0",
+        "ext-mysql_xdevapi": "*"
     },
     "require-dev": {
         "bangnokia/laravel-serve-livereload": "^1.1",

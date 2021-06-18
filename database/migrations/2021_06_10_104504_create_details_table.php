@@ -14,7 +14,6 @@ class CreateDetailsTable extends Migration
             $table->foreignId("ticket_id")->constrained();
             $table->foreignId("product_id")->constrained();
             $table->integer("quantity");
-
             $table->timestamps();
         });
     }

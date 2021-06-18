@@ -37,9 +37,7 @@ class Checkout extends Component
         ]);
     }
 
-    public function continueButton(){
-        return redirect()->to(route("paymentMethod"));
-    }
+
 
     public function render()
     {
