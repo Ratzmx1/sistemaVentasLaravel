@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Ticket extends Model
 {
     use HasFactory;
+
+    public function details(){
+        return $this->hasMany(Detail::class);
+    }
+
+    public function products(){
+        return $this->belongsToMany(Product::class,Detail::class);
+    }
+
 }
