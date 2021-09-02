@@ -28,6 +28,7 @@ class Products extends Component
     }
 
     public function render(){
+
         $prod = Product::paginate(9);
         $this->products = collect($prod->items());
         $this->dispatchBrowserEvent('productsUpdated');

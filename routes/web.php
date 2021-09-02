@@ -24,3 +24,4 @@ Route::get('/checkout', \App\Http\Livewire\Checkout::class)->name('checkout')->m
 Route::post("/payment1",['App\Http\Controllers\paymentController','create'])->name("paymentMethod")->middleware("auth");
 Route::get("/payment1",['App\Http\Controllers\paymentController','reciv'])->name("returnPayment")->middleware("auth");
 Route::get("/orders",['App\Http\Controllers\myOrdersController','show'])->name("myOrders")->middleware("auth");
+Route::get("/directions",\App\Http\Livewire\DirectionList::class)->name('directions')->middleware('auth');
