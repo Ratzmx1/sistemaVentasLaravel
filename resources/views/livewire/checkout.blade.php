@@ -59,7 +59,9 @@
             })
         }
         document.addEventListener("DOMContentLoaded",()=>{
-            updateHeight();
+            setTimeout(function (){
+                updateHeight()
+            },200);
         });
     </script>
 </div>
