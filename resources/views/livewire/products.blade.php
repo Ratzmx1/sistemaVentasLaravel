@@ -52,7 +52,7 @@
         document.addEventListener("DOMContentLoaded",()=>{
             setTimeout(function (){
                 updateHeight()
-            },500);
+            },200);
         });
     </script>
 
